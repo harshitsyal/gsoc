@@ -1,1 +1,46 @@
-hello hi github
+Github First & Second Commit Tutorial
+
+Github Site: https://github.com/
+
+For Guide: http://help.github.com/test-webhooks/
+
+1. Open your Github account
+2. Open the guide and Git Bash
+3. Create Repository
+4. Follow the steps in your Github (Creating README file)
+*You should create your README file first before anything else (no information must be placed into it; or you may if you want)*
+5. Find your ROOT FOLDER (it's your Repository Name that should be a folder placed in your pc)
+*For Windows 7: C:\Users\*your name*
+6. Place your HTML, .TXT, .DOC, etc. files in the ROOT FOLDER
+7. Follow the Guide Website in coding into your Git Bash
+
+FOR THOSE WITH EXISTING REPOSITORY and will place additional files, this codes must be used:
+
+FIRST COMMIT
+cd *Repository name*
+git init
+touch *yourfile.txt*
+git add *yourfile.txt*
+git commit -m 'first commit'
+git push origin master (or myorigin)
+
+SECOND COMMIT:
+git add *yourfile.txt*
+git commit -m 'second commit'
+git push origin master (or myorigin)
+
+NOTE: Please make sure that you don't forget your FILE EXTENSION (such as .txt, .html, .htm, .doc, etc.)
+
+---CODE EFFECTS---
+mkdir *repository name* - this will create a folder on your pc. (for windows 7: C:/users/*myname*/*name of your repository created*)
+cd *repository name* - this will run the folder on your PC.
+git init - it will initialize the folder and your system.
+touch *yourfile.txt* - this will run the file to be pushed in github.
+git add *yourfile.txt* - this will create a file in github.
+git commit -m 'first commit' - this is a message placed right after the file. (center column)
+git push origin master (or myorigin) - this will push your file on github; you may user myorigin if your having problems pushing your file.
+
+NOTE: If you cannot push files use this code "git push --force"
+
+Fact: This video took 7 minutes but if you mastered how to push and all the codes. you can consume 30 secs. to 1 minute. in pushing all your stuffs to Github.
+
