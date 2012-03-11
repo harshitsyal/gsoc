@@ -1,0 +1,43 @@
+***************************IMPORTANT NOTICE****************************
+This version of C5.0 is distributed without charge under the licence
+agreement in http://www.rulequest.com/demoeula.html.  Use of C5.0 or of its
+documentation signifies your willingness to be bound by this agreement.
+***********************************************************************
+
+
+The C5.0 System (Demonstration Version)
+---------------------------------------
+
+The C5.0 directory "bin" contains
+
+    *  a decision tree and ruleset generator ("c5.0demo")
+    *  a decision tree and ruleset interpreter ("predict")
+    *  a csh script ("xval") for multiple cross-validations
+    *  an ancillary program ("report") used by xval
+
+The Linux version also includes
+
+    *  a graphical user interface ("gui")
+    *  an associated file ("gui.exe.so") used by gui
+
+The graphical user interface requires Wine (http://winehq.org); Wine is
+included in most recent Linux distributions.
+
+In directory "Doc" you will find a html file "tutorial.html" that
+describes and illustrates the use of the C5.0 system.
+
+Examples
+--------
+
+The directory "Data" contains a few sample datasets.  More datasets are
+available from
+
+    *  the UCI KDD Archive (http://kdd.ics.uci.edu/)
+    *  the UCI Machine Learning Repository
+       (http://mlearn.ics.uci.edu/MLRepository.html)
+    *  the KDnuggets datasets index (http://kdnuggets.com/datasets/)
+
+Problems
+--------
+
+If you discover any bugs in the system, please email quinlan@rulequest.com.

@@ -1,0 +1,13 @@
+% This is an example for the initialization of the diag-kernel. 
+% The diag kernel has all kernel matrix entries but those on 
+% the main diagonal set to zero. 
+
+% Diag
+print Diag
+set_kernel DIAG REAL 10 23.
+
+set_features TRAIN ../data/fm_train_real.dat
+km_train.txt = get_kernel_matrix TRAIN
+
+set_features TEST ../data/fm_test_real.dat
+km_test.txt = get_kernel_matrix TEST

@@ -1,0 +1,32 @@
+result.			| attribute containing class to be predicted
+
+grain screened:		yes, no.
+proof on ctd ink: 	yes, no .
+blade mfg:		benton, daetwyler, uddeholm.
+paper type:		uncoated, coated, super.
+ink type:		uncoated, coated, cover.
+direct steam use:	yes, no.
+solvent type:		xylol, lactol, naptha, line, other.
+type on cylinder: 	yes, no.
+cylinder size:		catalog, spiegel, tabloid.
+paper mill location:	northus, southus, canadian, scandanavian, mideuropean.
+proof cut:		continuous.
+viscosity:		continuous.
+caliper:		continuous.
+ink temperature:	continuous.
+humidity:		continuous.
+roughness:		continuous.
+blade pressure:		continuous.
+varnish pct:		continuous.
+press speed:		continuous.
+ink pct:		continuous.
+solvent pct:		continuous.
+ESA Voltage:		continuous.
+ESA Amperage:		continuous.
+wax:			continuous.
+hardener: 		continuous.
+roller durometer: 	continuous.
+current density: 	continuous.
+anode space ratio: 	continuous.
+chrome content:		continuous.
+result:			band, noband.

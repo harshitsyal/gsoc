@@ -1,0 +1,15 @@
+% This example initializes the polynomial kernel with real data. 
+% If variable 'inhomogene' is 'true' +1 is added to the scalar product 
+% before taking it to the power of 'degree'. If 'use_normalization' is 
+% set to 'true' then kernel matrix will be normalized by the square roots
+% of the diagonal entries. 
+
+% Poly
+print Poly
+set_kernel POLY REAL 10 4 0 1
+
+set_features TRAIN ../data/fm_train_real.dat
+km_train.txt = get_kernel_matrix TRAIN
+
+set_features TEST ../data/fm_test_real.dat
+km_test.txt = get_kernel_matrix TEST

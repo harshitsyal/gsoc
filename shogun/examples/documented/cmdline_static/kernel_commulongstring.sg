@@ -1,0 +1,19 @@
+% This is an example for the initialization of the CommUlongString-kernel. This kernel 
+% sums over k-mere matches (k='order'). For efficient computing a preprocessor is used 
+% that extracts and sorts all k-mers. If 'use_sign' is set to one each k-mere is counted 
+% only once. 
+
+% Comm Ulong String
+print CommUlongString
+add_preproc SORTULONGSTRING
+set_kernel COMMSTRING ULONG 10 0 FULL
+
+set_features TRAIN ../data/fm_train_dna.dat DNA
+convert TRAIN STRING CHAR STRING ULONG 3 2 0 n
+attach_preproc TRAIN
+km_train.txt = get_kernel_matrix TRAIN
+
+set_features TEST ../data/fm_test_dna.dat DNA
+convert TEST STRING CHAR STRING ULONG 3 2 0 n
+attach_preproc TEST
+km_test.txt = get_kernel_matrix TEST

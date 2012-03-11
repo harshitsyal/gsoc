@@ -1,0 +1,21 @@
+% In this example a support vector regression algorithm is trained on a
+% real-valued toy data set. The underlying library used for the SVR training is
+% LIBSVM. The SVR is trained with regularization parameter C=1 and a gaussian
+% kernel with width=2.1.
+% 
+% For more details on LIBSVM solver see http://www.csie.ntu.edu.tw/~cjlin/libsvm/ .
+
+% LibSVR
+print LibSVR
+set_kernel GAUSSIAN REAL 10 2.1
+set_features TRAIN ../data/fm_train_real.dat
+set_labels TRAIN ../data/label_train_twoclass.dat
+new_regression LIBSVR
+svr_tube_epsilon 1e-2
+c 0.017
+
+train_regression
+
+set_features TEST ../data/fm_test_real.dat
+out.txt = classify
+! rm out.txt

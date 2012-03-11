@@ -1,0 +1,18 @@
+% This example shows usage of a k-nearest neighbor (KNN) classification rule on
+% a toy data set. The number of the nearest neighbors is set to k=3 and the distances
+% are measured by the Euclidean metric. Finally, the KNN rule is applied to predict
+% labels of test examples. 
+
+% KNN
+print KNN
+
+set_distance EUCLIDIAN REAL
+set_features TRAIN ../data/fm_train_real.dat
+set_labels TRAIN ../data/label_train_twoclass.dat
+new_classifier KNN
+
+train_classifier 3
+
+set_features TEST ../data/fm_test_real.dat
+out.txt = classify
+! rm out.txt

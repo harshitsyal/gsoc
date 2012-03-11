@@ -1,0 +1,11 @@
+% The FixedDegree String kernel takes as input two strings of same size and counts the number of matches of length d.
+
+% Fixed Degree String
+print FixedDegreeString
+set_kernel FIXEDDEGREE CHAR 10 3
+
+set_features TRAIN ../data/fm_train_dna.dat DNA
+km_train.txt = get_kernel_matrix TRAIN
+
+set_features TEST ../data/fm_test_dna.dat DNA
+km_test.txt = get_kernel_matrix TEST

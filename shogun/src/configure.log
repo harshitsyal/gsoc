@@ -1,0 +1,1278 @@
+============ Checking for C Compiler ============
+
+int main(void) { return 0; }
+
+  -fPIC ./configure-17252-19023.c -o ./configure-31585-19023.o  
+./configure: line 989: : command not found
+no object file created
+
+
+int main(void) { return 0; }
+
+cc  -fPIC ./configure-17252-19023.c -o ./configure-31585-19023.o  
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x0055a000)
+	libc.so.6 => /lib/libc.so.6 (0x00acf000)
+	/lib/ld-linux.so.2 (0x009b4000)
+
+Result is: gcc 4.4.5, ok
+##########################################
+
+============ Checking for C Compiler flags ============
+
+int main(void) { return 0; }
+
+cc  -fPIC ./configure-17252-19023.c -o ./configure-31585-19023.o  -g
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00d4e000)
+	libc.so.6 => /lib/libc.so.6 (0x00110000)
+	/lib/ld-linux.so.2 (0x00741000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g ./configure-17252-19023.c -o ./configure-31585-19023.o  -Wall
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00114000)
+	libc.so.6 => /lib/libc.so.6 (0x001a7000)
+	/lib/ld-linux.so.2 (0x00972000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall ./configure-17252-19023.c -o ./configure-31585-19023.o  -O9
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00701000)
+	libc.so.6 => /lib/libc.so.6 (0x00b87000)
+	/lib/ld-linux.so.2 (0x0093c000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 ./configure-17252-19023.c -o ./configure-31585-19023.o  -fexpensive-optimizations
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00e8b000)
+	libc.so.6 => /lib/libc.so.6 (0x006ee000)
+	/lib/ld-linux.so.2 (0x00bb7000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations ./configure-17252-19023.c -o ./configure-31585-19023.o  -frerun-cse-after-loop
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00842000)
+	libc.so.6 => /lib/libc.so.6 (0x0069f000)
+	/lib/ld-linux.so.2 (0x00b9e000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop ./configure-17252-19023.c -o ./configure-31585-19023.o  -fcse-follow-jumps
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00f49000)
+	libc.so.6 => /lib/libc.so.6 (0x0060a000)
+	/lib/ld-linux.so.2 (0x00bc2000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps ./configure-17252-19023.c -o ./configure-31585-19023.o  -finline-functions
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00f78000)
+	libc.so.6 => /lib/libc.so.6 (0x00993000)
+	/lib/ld-linux.so.2 (0x00376000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions ./configure-17252-19023.c -o ./configure-31585-19023.o  -fschedule-insns2
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x0077b000)
+	libc.so.6 => /lib/libc.so.6 (0x001f8000)
+	/lib/ld-linux.so.2 (0x00d2c000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 ./configure-17252-19023.c -o ./configure-31585-19023.o  -fthread-jumps
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x001fa000)
+	libc.so.6 => /lib/libc.so.6 (0x00973000)
+	/lib/ld-linux.so.2 (0x005d1000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps ./configure-17252-19023.c -o ./configure-31585-19023.o  -fforce-addr
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00b64000)
+	libc.so.6 => /lib/libc.so.6 (0x0077b000)
+	/lib/ld-linux.so.2 (0x00f99000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr ./configure-17252-19023.c -o ./configure-31585-19023.o  -fstrength-reduce
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x009af000)
+	libc.so.6 => /lib/libc.so.6 (0x00424000)
+	/lib/ld-linux.so.2 (0x006f1000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce ./configure-17252-19023.c -o ./configure-31585-19023.o  -funroll-loops
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00890000)
+	libc.so.6 => /lib/libc.so.6 (0x00250000)
+	/lib/ld-linux.so.2 (0x00232000)
+
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops ./configure-17252-19023.c -o ./configure-31585-19023.o  -mfpmath=sse
+./configure-17252-19023.c:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00788000)
+	libc.so.6 => /lib/libc.so.6 (0x00e67000)
+	/lib/ld-linux.so.2 (0x0057f000)
+
+Result is: -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse
+##########################################
+
+============ Checking for C++ Compiler ============
+
+int main(void) { return 0; }
+
+  -fPIC ./configure-4466-19023.cpp -o ./configure-31585-19023.o  
+./configure: line 1009: : command not found
+no object file created
+
+
+int main(void) { return 0; }
+
+c++  -fPIC ./configure-4466-19023.cpp -o ./configure-31585-19023.o  
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00478000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x001ab000)
+	libm.so.6 => /lib/libm.so.6 (0x00938000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x005c0000)
+	libc.so.6 => /lib/libc.so.6 (0x00ba2000)
+	/lib/ld-linux.so.2 (0x0036a000)
+
+Result is: gcc 4.4.5, ok
+##########################################
+
+============ Checking for C++ Compiler flags ============
+
+int main(void) { return 0; }
+
+c++  -fPIC ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -g
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00e22000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00234000)
+	libm.so.6 => /lib/libm.so.6 (0x006ef000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00110000)
+	libc.so.6 => /lib/libc.so.6 (0x008ad000)
+	/lib/ld-linux.so.2 (0x0060b000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -Wall
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00f72000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00d69000)
+	libm.so.6 => /lib/libm.so.6 (0x0088f000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00c8d000)
+	libc.so.6 => /lib/libc.so.6 (0x0035c000)
+	/lib/ld-linux.so.2 (0x00ccf000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -O9
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00110000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00ee4000)
+	libm.so.6 => /lib/libm.so.6 (0x002f2000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x009ab000)
+	libc.so.6 => /lib/libc.so.6 (0x00bb1000)
+	/lib/ld-linux.so.2 (0x006fd000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -fexpensive-optimizations
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00530000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00c1a000)
+	libm.so.6 => /lib/libm.so.6 (0x001e3000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00f77000)
+	libc.so.6 => /lib/libc.so.6 (0x00209000)
+	/lib/ld-linux.so.2 (0x009e7000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -frerun-cse-after-loop
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x0092d000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00e87000)
+	libm.so.6 => /lib/libm.so.6 (0x00647000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00110000)
+	libc.so.6 => /lib/libc.so.6 (0x0012c000)
+	/lib/ld-linux.so.2 (0x00a33000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -fcse-follow-jumps
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00c65000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00e09000)
+	libm.so.6 => /lib/libm.so.6 (0x00ef8000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00910000)
+	libc.so.6 => /lib/libc.so.6 (0x00110000)
+	/lib/ld-linux.so.2 (0x00f44000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -finline-functions
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00fee000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00d64000)
+	libm.so.6 => /lib/libm.so.6 (0x0055e000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00900000)
+	libc.so.6 => /lib/libc.so.6 (0x0037c000)
+	/lib/ld-linux.so.2 (0x005a2000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -fschedule-insns2
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00951000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x001ca000)
+	libm.so.6 => /lib/libm.so.6 (0x00df4000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00986000)
+	libc.so.6 => /lib/libc.so.6 (0x00357000)
+	/lib/ld-linux.so.2 (0x00915000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -fthread-jumps
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00611000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00c03000)
+	libm.so.6 => /lib/libm.so.6 (0x00a1e000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x005d4000)
+	libc.so.6 => /lib/libc.so.6 (0x00132000)
+	/lib/ld-linux.so.2 (0x00114000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -fforce-addr
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x009f3000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00c25000)
+	libm.so.6 => /lib/libm.so.6 (0x00a93000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00206000)
+	libc.so.6 => /lib/libc.so.6 (0x00453000)
+	/lib/ld-linux.so.2 (0x008c7000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -fstrength-reduce
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00d1d000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00110000)
+	libm.so.6 => /lib/libm.so.6 (0x00b48000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x006eb000)
+	libc.so.6 => /lib/libc.so.6 (0x00502000)
+	/lib/ld-linux.so.2 (0x008c7000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -funroll-loops
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x005a7000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00a84000)
+	libm.so.6 => /lib/libm.so.6 (0x005e6000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00e9c000)
+	libc.so.6 => /lib/libc.so.6 (0x00110000)
+	/lib/ld-linux.so.2 (0x0067d000)
+
+
+int main(void) { return 0; }
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -mfpmath=sse
+./configure-4466-19023.cpp:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x006ef000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x0053e000)
+	libm.so.6 => /lib/libm.so.6 (0x0089f000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00110000)
+	libc.so.6 => /lib/libc.so.6 (0x00734000)
+	/lib/ld-linux.so.2 (0x00f85000)
+
+Result is: -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse
+##########################################
+
+============ Checking for makedepend ============
+Result is: gcc -MM
+##########################################
+
+============ Checking for Python ============
+Result is: 2.6.6
+##########################################
+
+============ Checking for pkg-config ============
+Result is: 0.25
+##########################################
+
+============ Checking for GNU Make ============
+Result is: GNU Make 3.81
+##########################################
+
+============ Checking for Doxygen ============
+Result is: doxygen not detected, for documentation please install
+##########################################
+
+============ Checking for CPU vendor ============
+Result is: GenuineIntel (6:37:5)
+##########################################
+
+============ Checking for CPU type ============
+Result is:  Intel(R) Core(TM) i5 CPU       M 480  @ 2.67GHz
+##########################################
+
+============ Checking for GCC & CPU optimization abilities ============
+
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  -march=native
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00d7e000)
+	libc.so.6 => /lib/libc.so.6 (0x00110000)
+	/lib/ld-linux.so.2 (0x009c9000)
+
+Result is: native
+##########################################
+
+============ Checking for compiler and kernel support of mmx ============
+
+#include <stdlib.h>
+#include <signal.h>
+void catch() { exit(1); }
+int main(void){
+  signal(SIGILL, catch);
+  __asm__ volatile ("emms":::"memory"); return(0);
+}
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  
+./configure-17252-19023.c:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00176000)
+	libc.so.6 => /lib/libc.so.6 (0x003a5000)
+	/lib/ld-linux.so.2 (0x00e61000)
+
+Result is: yes
+##########################################
+
+============ Checking for compiler and kernel support of mmxext ============
+
+#include <stdlib.h>
+#include <signal.h>
+void catch() { exit(1); }
+int main(void){
+  signal(SIGILL, catch);
+  __asm__ volatile ("sfence":::"memory"); return(0);
+}
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  
+./configure-17252-19023.c:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00b22000)
+	libc.so.6 => /lib/libc.so.6 (0x002df000)
+	/lib/ld-linux.so.2 (0x00192000)
+
+Result is: yes
+##########################################
+
+============ Checking for compiler and kernel support of sse ============
+
+#include <stdlib.h>
+#include <signal.h>
+void catch() { exit(1); }
+int main(void){
+  signal(SIGILL, catch);
+  __asm__ volatile ("xorps %%xmm0, %%xmm0":::"memory"); return(0);
+}
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  
+./configure-17252-19023.c:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00a24000)
+	libc.so.6 => /lib/libc.so.6 (0x00c8d000)
+	/lib/ld-linux.so.2 (0x00b8d000)
+
+Result is: yes
+##########################################
+
+============ Checking for compiler and kernel support of sse2 ============
+
+#include <stdlib.h>
+#include <signal.h>
+void catch() { exit(1); }
+int main(void){
+  signal(SIGILL, catch);
+  __asm__ volatile ("xorpd %%xmm0, %%xmm0":::"memory"); return(0);
+}
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  
+./configure-17252-19023.c:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x005fd000)
+	libc.so.6 => /lib/libc.so.6 (0x00cc9000)
+	/lib/ld-linux.so.2 (0x006c4000)
+
+Result is: yes
+##########################################
+
+============ Checking for compiler and kernel support of cmov ============
+
+#include <stdlib.h>
+#include <signal.h>
+void catch() { exit(1); }
+int main(void){
+  signal(SIGILL, catch);
+  __asm__ volatile ("cmovb %%eax,%%ebx":::"memory"); return(0);
+}
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  
+./configure-17252-19023.c:1: warning: SSE instruction set disabled, using 387 arithmetics
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x0036f000)
+	libc.so.6 => /lib/libc.so.6 (0x00d55000)
+	/lib/ld-linux.so.2 (0x00d36000)
+
+Result is: yes
+##########################################
+
+============ Checking for xmmintrin.h ============
+
+#include <xmmintrin.h>
+int main() { _mm_sfence(); return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse ./configure-17252-19023.c -o ./configure-31585-19023.o  -msse
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x0078a000)
+	libc.so.6 => /lib/libc.so.6 (0x002de000)
+	/lib/ld-linux.so.2 (0x0043f000)
+
+Result is: yes
+##########################################
+
+============ Checking for Word Size ============
+Result is: 32 bit
+##########################################
+
+============ Checking for Math support (-lm) ============
+
+#include <math.h>
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native ./configure-17252-19023.c -o ./configure-31585-19023.o  -lm
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00aa0000)
+	libm.so.6 => /lib/libm.so.6 (0x00891000)
+	libc.so.6 => /lib/libc.so.6 (0x00110000)
+	/lib/ld-linux.so.2 (0x00578000)
+
+Result is: yes
+##########################################
+
+============ Checking for Math powl() support ============
+
+#include <math.h>
+int main(int argc, char** argv)
+{
+	long double a=powl((long double) argc, (long double) argc);
+	return (int) a;
+}
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -lm -lm
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00961000)
+	libm.so.6 => /lib/libm.so.6 (0x00508000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00e9a000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00aa3000)
+	libc.so.6 => /lib/libc.so.6 (0x00ba9000)
+	/lib/ld-linux.so.2 (0x00465000)
+
+Result is: yes
+##########################################
+
+============ Checking for Math lgammal() support ============
+
+#include <math.h>
+int main(int argc, char** argv)
+{
+	long double a=lgammal((long double) argc);
+	return (int) a;
+}
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -lm -lm
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x0053a000)
+	libm.so.6 => /lib/libm.so.6 (0x00955000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x0021a000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00eef000)
+	libc.so.6 => /lib/libc.so.6 (0x00305000)
+	/lib/ld-linux.so.2 (0x006d2000)
+
+Result is: yes
+##########################################
+
+============ Checking for Math sqrtl() support ============
+
+#include <math.h>
+int main(int argc, char** argv)
+{
+	long double a=sqrtl((long double) argc);
+	return (int) a;
+}
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -lm -lm
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00b9d000)
+	libm.so.6 => /lib/libm.so.6 (0x00110000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00136000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x0073b000)
+	libc.so.6 => /lib/libc.so.6 (0x00221000)
+	/lib/ld-linux.so.2 (0x00e76000)
+
+Result is: yes
+##########################################
+
+============ Checking for Math log2() support ============
+
+#include <math.h>
+int main(int argc, char** argv)
+{
+	double a=log2((double) argc);
+	return (int) a;
+}
+
+c++  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -lm -lm
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00a53000)
+	libm.so.6 => /lib/libm.so.6 (0x00504000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x006f7000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00b9b000)
+	libc.so.6 => /lib/libc.so.6 (0x00110000)
+	/lib/ld-linux.so.2 (0x0043c000)
+
+Result is: yes
+##########################################
+
+============ Checking for Posix threads support ============
+
+#include <pthread.h>
+int main(void) { return 0; }
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native ./configure-17252-19023.c -o ./configure-31585-19023.o  -pthread -lm
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00dcd000)
+	libm.so.6 => /lib/libm.so.6 (0x00dd7000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x00748000)
+	libc.so.6 => /lib/libc.so.6 (0x001d9000)
+	/lib/ld-linux.so.2 (0x00efe000)
+
+Result is: yes
+##########################################
+
+============ Checking for HDF5 (>= 1.8.0) support ============
+
+#include <hdf5.h>
+int main(void)
+{
+	hid_t file = H5Fcreate("foobar.h5", H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+	hid_t group = H5Gcreate2(file, "groupname", H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+
+	return 0;
+}
+
+cc  -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lhdf5 -lm -pthread
+./configure-17252-19023.c: In function ‘main’:
+./configure-17252-19023.c:5: warning: unused variable ‘group’
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00bf2000)
+	libhdf5.so.6 => /usr/lib/libhdf5.so.6 (0x00139000)
+	libm.so.6 => /lib/libm.so.6 (0x006ca000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x00620000)
+	libc.so.6 => /lib/libc.so.6 (0x00bf6000)
+	libz.so.1 => /lib/libz.so.1 (0x004ba000)
+	/lib/ld-linux.so.2 (0x0011b000)
+
+Result is: yes
+##########################################
+
+============ Checking for libjson (json-c) ============
+
+#include <json.h>
+int main(void)
+{
+	json_object* x = json_object_new_object();
+	json_object_put(x);
+
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -ljson -lm -pthread -lhdf5
+./configure-17252-19023.c:1: fatal error: json.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for libxml2 (>= 2.7.0) ============
+
+#include <libxml/parser.h>
+#include <libxml/tree.h>
+
+int main(void)
+{
+	LIBXML_TEST_VERSION;
+
+#if !defined(LIBXML_TREE_ENABLED) || !defined(LIBXML_OUTPUT_ENABLED)
+	this_is_not_compilable :)
+#endif
+
+	xmlDocPtr doc = xmlNewDoc(BAD_CAST "1.0");
+	xmlNode* node = xmlNewNode(NULL, BAD_CAST "Hello");
+	xmlDocSetRootElement(doc, node);
+
+	xmlChildElementCount(node);
+
+	xmlFreeDoc(doc);
+	xmlCleanupParser();
+
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lxml2 -lm -pthread -lhdf5
+./configure-17252-19023.c:1: fatal error: libxml/parser.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for AMD ACML support ============
+
+#include <cblas.h>
+void dpotrf(char uplo, int n, double *a, int lda, int *info);
+
+int main(int argc, char** argv)
+{
+	char uplo = 'U';
+	int info=0;
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int lda=1;
+	dpotrf(uplo, n, a, lda, &info);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lacml -lcblas -lgfortran -lm -pthread -lhdf5
+./configure-17252-19023.c: In function ‘main’:
+./configure-17252-19023.c:12: warning: unused variable ‘r’
+/usr/bin/ld: cannot find -lacml
+/usr/bin/ld: cannot find -lcblas
+collect2: ld returned 1 exit status
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for Intel MKL support ============
+
+#include <mkl_cblas.h>
+void dpotrf(char* uplo, int* n, double* a, int* lda, int* info);
+
+int main(int argc, char** argv)
+{
+	char uplo = 'U';
+	int info=0;
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int lda=1;
+	dpotrf(&uplo, &n, a, &lda, &info);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lmkl -lguide -lmkl_lapack -lm -pthread -lhdf5
+./configure-17252-19023.c:1: fatal error: mkl_cblas.h: No such file or directory
+compilation terminated.
+no object file created
+
+
+#include <mkl_cblas.h>
+void dpotrf(char* uplo, int* n, double* a, int* lda, int* info);
+
+int main(int argc, char** argv)
+{
+	char uplo = 'U';
+	int info=0;
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int lda=1;
+	dpotrf(&uplo, &n, a, &lda, &info);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lmkl -lguide -lmkl_lapack64 -lm -pthread -lhdf5
+./configure-17252-19023.c:1: fatal error: mkl_cblas.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for Atlas support ============
+
+#include <cblas.h>
+#include <atlas/clapack.h>
+
+int main(int argc, char** argv)
+{
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int result=clapack_dpotrf(CblasRowMajor, CblasUpper, n, a, n);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llapack -lcblas -llapack_atlas -lm -pthread -lhdf5
+./configure-17252-19023.c:2: fatal error: atlas/clapack.h: No such file or directory
+compilation terminated.
+no object file created
+
+
+#include <cblas.h>
+#include <atlas/clapack.h>
+
+int main(int argc, char** argv)
+{
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int result=clapack_dpotrf(CblasRowMajor, CblasUpper, n, a, n);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -L/usr/lib/atlas -llapack -lcblas -llapack_atlas -lm -pthread -lhdf5
+./configure-17252-19023.c:2: fatal error: atlas/clapack.h: No such file or directory
+compilation terminated.
+no object file created
+
+
+#include <cblas.h>
+#include <atlas/clapack.h>
+
+int main(int argc, char** argv)
+{
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int result=clapack_dpotrf(CblasRowMajor, CblasUpper, n, a, n);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llapack -lcblas -latlas -lm -pthread -lhdf5
+./configure-17252-19023.c:2: fatal error: atlas/clapack.h: No such file or directory
+compilation terminated.
+no object file created
+
+
+#include <cblas.h>
+#include <atlas/clapack.h>
+
+int main(int argc, char** argv)
+{
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	int result=clapack_dpotrf(CblasRowMajor, CblasUpper, n, a, n);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -L/usr/lib/atlas -llapack -lcblas -latlas -lm -pthread -lhdf5
+./configure-17252-19023.c:2: fatal error: atlas/clapack.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for Mac OS vector library ============
+
+#include </System/Library/Frameworks/vecLib.framework/Headers/cblas.h>
+#include </System/Library/Frameworks/vecLib.framework/Headers/clapack.h>
+
+int dpotrf_(char* uplo, int* n, double* a, int* lda, int* info);
+int main(int argc, char** argv)
+{
+	char uplo = 'U';
+	int info=0;
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	dpotrf_(uplo, &n, a, 1, &info);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llapack -lcblas -lm -pthread -lhdf5
+./configure-17252-19023.c:1: fatal error: /System/Library/Frameworks/vecLib.framework/Headers/cblas.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for Vanilla lapack and blas support ============
+
+#include <cblas.h>
+int dpotrf_(char* uplo, int* n, double* a, int* lda, int* info);
+int main(int argc, char** argv)
+{
+	char uplo = 'U';
+	int info=0;
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	dpotrf_(uplo, &n, a, 1, &info);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llapack -lcblas -lm -pthread -lhdf5
+./configure-17252-19023.c: In function ‘main’:
+./configure-17252-19023.c:9: warning: passing argument 1 of ‘dpotrf_’ makes pointer from integer without a cast
+./configure-17252-19023.c:2: note: expected ‘char *’ but argument is of type ‘char’
+./configure-17252-19023.c:9: warning: passing argument 4 of ‘dpotrf_’ makes pointer from integer without a cast
+./configure-17252-19023.c:2: note: expected ‘int *’ but argument is of type ‘int’
+./configure-17252-19023.c:10: warning: unused variable ‘r’
+/usr/bin/ld: cannot find -lcblas
+collect2: ld returned 1 exit status
+no object file created
+
+
+#include <cblas.h>
+int dpotrf_(char* uplo, int* n, double* a, int* lda, int* info);
+int main(int argc, char** argv)
+{
+	char uplo = 'U';
+	int info=0;
+	int skip=argc;
+	int n=argc; double* a=0; double* v1=0; double* v2=0;
+	dpotrf_(uplo, &n, a, 1, &info);
+	int r = cblas_ddot(n, v1, skip, v2, skip);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llapack -lblas -lm -pthread -lhdf5
+./configure-17252-19023.c: In function ‘main’:
+./configure-17252-19023.c:9: warning: passing argument 1 of ‘dpotrf_’ makes pointer from integer without a cast
+./configure-17252-19023.c:2: note: expected ‘char *’ but argument is of type ‘char’
+./configure-17252-19023.c:9: warning: passing argument 4 of ‘dpotrf_’ makes pointer from integer without a cast
+./configure-17252-19023.c:2: note: expected ‘int *’ but argument is of type ‘int’
+./configure-17252-19023.c:10: warning: unused variable ‘r’
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x003c8000)
+	liblapack.so.3gf => /usr/lib/liblapack.so.3gf (0x003c9000)
+	libblas.so.3gf => /usr/lib/libblas.so.3gf (0x00ce4000)
+	libm.so.6 => /lib/libm.so.6 (0x00110000)
+	libhdf5.so.6 => /usr/lib/libhdf5.so.6 (0x00fde000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x00392000)
+	libc.so.6 => /lib/libc.so.6 (0x001ce000)
+	libgfortran.so.3 => /usr/lib/libgfortran.so.3 (0x00bf7000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00136000)
+	/lib/ld-linux.so.2 (0x00cc6000)
+	libz.so.1 => /lib/libz.so.1 (0x00152000)
+
+Result is: yes
+##########################################
+
+============ Checking for SuperLU support ============
+
+#include <superlu/slu_ddefs.h>
+int main(int argc, char **argv)
+{
+	SuperMatrix A;
+	return 0;
+}
+
+c++   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -lsuperlu -lm -pthread -lhdf5 -llapack -lblas
+./configure-4466-19023.cpp:1: fatal error: superlu/slu_ddefs.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for ARPACK support ============
+
+extern "C" void dsaupd_(int *ido, char *bmat, int *n, char *which,
+int *nev, double *tol, double *resid, int *ncv,
+double *v, int *ldv, int *iparam, int *ipntr,
+double *workd, double *workl, int *lworkl,
+int *info);
+
+int main(int argc, char **argv)
+{
+	int ido = 0,n = 3, nev=1;
+	double tol = 0.0;
+	double* resid = new double[n];
+	int ncv = n;
+	int ldv = n;
+	double* v = new double[ldv*ncv];
+	int* iparam = new int[11];
+	iparam[0] = 1;
+	iparam[2] = 3*n;
+	iparam[6] = 1;
+	int* ipntr = new int[11];
+	double* workd = new double[3*n];
+	double* workl = new double[ncv*(ncv+8)];
+	int lworkl = ncv*(ncv+8);
+	char bmat[2] = "I";
+	char which[3] = "SM";
+	int info = 0;
+	dsaupd_(&ido,bmat,&n,which,
+	&nev,&tol,resid,&ncv,
+	v,&ldv,iparam,ipntr,
+	workd,workl,&lworkl,&info);
+	delete[] resid;
+	delete[] v;
+	delete[] iparam;
+	delete[] ipntr;
+	delete[] workd;
+	delete[] workl;
+	return 0;
+}
+
+c++   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -larpack -lm -pthread -lhdf5 -llapack -lblas
+/usr/bin/ld: cannot find -larpack
+collect2: ld returned 1 exit status
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for CPLEX support ============
+Result is: no
+##########################################
+
+============ Checking for GLPK ============
+
+#include <glpk.h>
+int main()
+{
+	glp_term_out(GLP_OFF);
+	LPX* lp=lpx_create_prob();
+	lpx_delete_prob(lp);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lglpk -lm -lm -pthread -lhdf5 -llapack -lblas
+./configure-17252-19023.c:1: fatal error: glpk.h: No such file or directory
+compilation terminated.
+no object file created
+
+
+#include <glpk.h>
+int main()
+{
+	glp_term_out(GLP_OFF);
+	LPX* lp=lpx_create_prob();
+	lpx_delete_prob(lp);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -I/usr/include/glpk -lglpk -lm -lm -pthread -lhdf5 -llapack -lblas
+./configure-17252-19023.c:1: fatal error: glpk.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for lzo ============
+
+#include "lzo/lzoconf.h"
+#include "lzo/lzo1x.h"
+int main(int argc, char** argv)
+{
+	volatile lzo_bytep in;
+	volatile lzo_uint in_len;
+	return (lzo_init() != LZO_E_OK) ? 1 : 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llzo2 -lm -pthread -lhdf5 -llapack -lblas
+./configure-17252-19023.c:1: fatal error: lzo/lzoconf.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for snappy ============
+
+#include <snappy.h>
+int main(int argc, char** argv)
+{
+	size_t input_length = (size_t) argc;
+	char* output = new char[snappy::MaxCompressedLength(input_length)];
+	size_t output_length;
+	RawCompress(input, input_length, output, &output_length);
+	delete [] output;
+	return int(output_length);
+}
+
+c++   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-4466-19023.cpp -o ./configure-31585-19023.o  -lsnappy -lm -pthread -lhdf5 -llapack -lblas
+./configure-4466-19023.cpp:1: fatal error: snappy.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for gzip ============
+
+#include <zlib.h>
+int main(int argc, char** argv)
+{
+	uLongf l=argc;
+	return (compress2((Bytef*) argv, &l, (Bytef*) argv, l, argc) != Z_OK);
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lz -lm -pthread -lhdf5 -llapack -lblas
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00a61000)
+	libz.so.1 => /lib/libz.so.1 (0x00732000)
+	libm.so.6 => /lib/libm.so.6 (0x0048c000)
+	libhdf5.so.6 => /usr/lib/libhdf5.so.6 (0x00a62000)
+	liblapack.so.3gf => /usr/lib/liblapack.so.3gf (0x00de3000)
+	libblas.so.3gf => /usr/lib/libblas.so.3gf (0x00110000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x0057b000)
+	libc.so.6 => /lib/libc.so.6 (0x00595000)
+	/lib/ld-linux.so.2 (0x008c8000)
+	libgfortran.so.3 => /usr/lib/libgfortran.so.3 (0x004b2000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x0040a000)
+
+Result is: yes
+##########################################
+
+============ Checking for bzip2 ============
+
+#include <bzlib.h>
+int main(int argc, char** argv)
+{
+	bz_stream* strm=NULL;
+	return BZ2_bzCompress(strm, argc);
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -lbz2 -lm -pthread -lhdf5 -llapack -lblas -lz
+./configure-17252-19023.c:1: fatal error: bzlib.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for lzma ============
+
+#include <lzma.h>
+int main(int argc, char** argv)
+{
+	return (int) lzma_stream_buffer_bound((size_t) argc) ;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -llzma -lm -pthread -lhdf5 -llapack -lblas -lz
+./configure-17252-19023.c:1: fatal error: lzma.h: No such file or directory
+compilation terminated.
+no object file created
+
+Result is: no
+##########################################
+
+============ Checking for Posix thread spinlock support ============
+
+#include <pthread.h>
+int main(void)
+{
+	volatile pthread_spinlock_t lock;
+	pthread_spin_init(&lock, 0);
+	return 0;
+}
+
+cc   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-17252-19023.c -o ./configure-31585-19023.o  -Xlinker --no-undefined -pthread -lm -pthread -lhdf5 -llapack -lblas -lz
+
+ldd ./configure-31585-19023.o
+	linux-gate.so.1 =>  (0x00768000)
+	libm.so.6 => /lib/libm.so.6 (0x00503000)
+	libhdf5.so.6 => /usr/lib/libhdf5.so.6 (0x00110000)
+	liblapack.so.3gf => /usr/lib/liblapack.so.3gf (0x00769000)
+	libblas.so.3gf => /usr/lib/libblas.so.3gf (0x1c92f000)
+	libz.so.1 => /lib/libz.so.1 (0x00491000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x004a6000)
+	libc.so.6 => /lib/libc.so.6 (0x00529000)
+	/lib/ld-linux.so.2 (0x00fe4000)
+	libgfortran.so.3 => /usr/lib/libgfortran.so.3 (0x00687000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x004c0000)
+
+Result is: yes
+##########################################
+
+============ Checking for libshogun ============
+Result is: yes (internal in source tree)
+##########################################
+
+============ Checking for Octave ============
+Result is: 3.2.4
+##########################################
+
+============ Checking for octave-config ============
+Result is: api-v37
+##########################################
+
+============ Checking for Octave Developer Files ============
+
+
+#include <octave/config.h>
+
+#include <octave/defun-dld.h>
+#include <octave/error.h>
+#include <octave/oct-obj.h>
+#include <octave/pager.h>
+#include <octave/symtab.h>
+#include <octave/variables.h>
+
+DEFUN_DLD (sg, prhs, nlhs, "shogun.")
+{
+	int nrhs = prhs.length();
+	octave_value_list plhs;
+	return plhs;
+}
+
+c++ -I. -I..   -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread ./configure-4466-19023.cpp -o ./configure-22599-19023.so  -Xlinker --no-undefined -fPIC -g -Wall -O9 -fexpensive-optimizations -frerun-cse-after-loop -fcse-follow-jumps -finline-functions -fschedule-insns2 -fthread-jumps -fforce-addr -fstrength-reduce -funroll-loops -mfpmath=sse -march=native -mtune=native -pthread -fPIC -I/usr/include/octave-3.2.4 -I/usr/include -shared -L /usr/lib/octave-3.2.4 -loctinterp -loctave -lcruft -lm -pthread -lhdf5 -llapack -lblas -lz
+./configure-4466-19023.cpp: In function ‘octave_value_list Fsg(const octave_value_list&, int)’:
+./configure-4466-19023.cpp:13: warning: unused variable ‘nrhs’
+
+ldd ./configure-22599-19023.so
+	linux-gate.so.1 =>  (0x00c49000)
+	liboctinterp.so => /usr/lib/octave-3.2.4/liboctinterp.so (0x00c4a000)
+	liboctave.so => /usr/lib/octave-3.2.4/liboctave.so (0x0ab76000)
+	libcruft.so => /usr/lib/octave-3.2.4/libcruft.so (0x00387000)
+	libhdf5.so.6 => /usr/lib/libhdf5.so.6 (0x003fd000)
+	liblapack.so.3gf => /usr/lib/liblapack.so.3gf (0x0fc34000)
+	libblas.so.3gf => /usr/lib/libblas.so.3gf (0x007e6000)
+	libz.so.1 => /lib/libz.so.1 (0x00110000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00125000)
+	libm.so.6 => /lib/libm.so.6 (0x00210000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0x00236000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x00252000)
+	libc.so.6 => /lib/libc.so.6 (0x194bb000)
+	libreadline.so.6 => /lib/libreadline.so.6 (0x0026c000)
+	libncurses.so.5 => /lib/libncurses.so.5 (0x002a0000)
+	libdl.so.2 => /lib/libdl.so.2 (0x002d9000)
+	libgfortran.so.3 => /usr/lib/libgfortran.so.3 (0x00b58000)
+	libX11.so.6 => /usr/lib/libX11.so.6 (0x1f68d000)
+	libftgl.so.2 => /usr/lib/libftgl.so.2 (0x002dd000)
+	libfreetype.so.6 => /usr/lib/libfreetype.so.6 (0x0030a000)
+	libGL.so.1 => /usr/lib/mesa/libGL.so.1 (0x0077e000)
+	libGLU.so.1 => /usr/lib/libGLU.so.1 (0x0f06b000)
+	libcholmod.so.1.7.1 => /usr/lib/libcholmod.so.1.7.1 (0x14b04000)
+	libumfpack.so.5.4.0 => /usr/lib/libumfpack.so.5.4.0 (0x018e6000)
+	libamd.so.2.2.0 => /usr/lib/libamd.so.2.2.0 (0x007d1000)
+	libcamd.so.2.2.0 => /usr/lib/libcamd.so.2.2.0 (0x00ae0000)
+	libcolamd.so.2.7.1 => /usr/lib/libcolamd.so.2.7.1 (0x007da000)
+	libccolamd.so.2.7.1 => /usr/lib/libccolamd.so.2.7.1 (0x00ae9000)
+	libcxsparse.so.2.2.3 => /usr/lib/libcxsparse.so.2.2.3 (0x00af4000)
+	libarpack.so.2 => /usr/lib/libarpack.so.2 (0x20bc3000)
+	libqrupdate.so.1 => /usr/lib/libqrupdate.so.1 (0x00c14000)
+	libfftw3.so.3 => /usr/lib/libfftw3.so.3 (0x01983000)
+	libfftw3f.so.3 => /usr/lib/libfftw3f.so.3 (0x0879a000)
+	libpcre.so.3 => /lib/libpcre.so.3 (0x1247f000)
+	/lib/ld-linux.so.2 (0x00b3a000)
+	libxcb.so.1 => /usr/lib/libxcb.so.1 (0x09cb9000)
+	libXext.so.6 => /usr/lib/libXext.so.6 (0x00b21000)
+	libXdamage.so.1 => /usr/lib/libXdamage.so.1 (0x00381000)
+	libXfixes.so.3 => /usr/lib/libXfixes.so.3 (0x00b31000)
+	libXxf86vm.so.1 => /usr/lib/libXxf86vm.so.1 (0x00c33000)
+	libdrm.so.2 => /lib/libdrm.so.2 (0x00c39000)
+	libXau.so.6 => /usr/lib/libXau.so.6 (0x00c43000)
+	libXdmcp.so.6 => /usr/lib/libXdmcp.so.6 (0x0d496000)
+	librt.so.1 => /lib/librt.so.1 (0x14342000)
+
+Result is: yes
+##########################################
+
+============ Checking for SWIG ============
+Result is: 1.3.40
+##########################################
+

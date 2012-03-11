@@ -1,0 +1,11 @@
+% The well known Gaussian kernel (swiss army knife for SVMs) on dense real valued features.
+
+% Gaussian
+print Gaussian
+set_kernel GAUSSIAN REAL 10 1.4
+
+set_features TRAIN ../data/fm_train_real.dat
+km_train.txt = get_kernel_matrix TRAIN
+
+set_features TEST ../data/fm_test_real.dat
+km_test.txt = get_kernel_matrix TEST

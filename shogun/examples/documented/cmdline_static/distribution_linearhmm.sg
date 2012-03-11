@@ -1,0 +1,19 @@
+% Trains an inhomogeneous Markov chain of order 3 on a DNA string data set. Due to
+% the structure of the Markov chain it is very similar to a HMM with just one
+% chain of connected hidden states - that is why we termed this linear HMM.
+
+% LinearHMM
+print LinearHMM - not yet supported
+
+%new_distribution LinearHMM
+add_preproc SORTWORDSTRING
+
+set_features TRAIN ../data/fm_train_dna.dat DNA
+convert TRAIN STRING CHAR STRING WORD 3 2 0 n
+attach_preproc TRAIN
+
+%train_distribution
+%histo.txt = get_histogram
+
+%get_log_likelihood
+%get_log_likelihood_sample
